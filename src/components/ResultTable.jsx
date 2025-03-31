@@ -10,13 +10,18 @@ const TableContainer = styled.div`
   width: 100%;
   height: auto;
   max-height: ${props => Math.min(props.$pageSize * ROW_HEIGHT + HEADER_HEIGHT, 700)}px;
-  overflow: auto !important;
+  overflow-x: auto !important;
+  overflow-y: auto !important;
   border: 1px solid ${props => props.theme.border};
   border-radius: 4px;
   position: relative;
   background: ${props => props.theme.surface};
-  display: table;
-  table-layout: fixed;
+  -webkit-overflow-scrolling: touch;
+  
+  @media (max-width: 768px) {
+    font-size: 14px;
+    max-width: 100vw;
+  }
 `;
 
 const EmptyStateContainer = styled.div`
@@ -39,7 +44,8 @@ const HeaderRow = styled.div`
   top: 0;
   z-index: 10;
   height: 48px;
-  width: 100%;
+  width: fit-content;
+  min-width: 100%;
   color: ${props => props.theme.text};
 `;
 
@@ -51,9 +57,16 @@ const Cell = styled.div`
   text-overflow: ellipsis;
   white-space: nowrap;
   min-width: 100px;
+  flex: 1;
   box-sizing: border-box;
   color: ${props => props.theme.text};
   border-right: 1px solid ${props => props.theme.border};
+
+  @media (max-width: 768px) {
+    padding: 0 8px;
+    min-width: 80px;
+    font-size: inherit;
+  }
 
   &:last-child {
     border-right: none;
@@ -181,10 +194,35 @@ const PageNavigation = styled.div`
   }
 `;
 
-// Update TableWrapper to handle table size more intelligently
+// Update TableWrapper to handle mobile view better
 const TableWrapper = styled.div`
   width: 100%;
-  overflow-x: auto; // Always allow horizontal scrolling for large tables
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  
+  @media (max-width: 768px) {
+    margin: 0 -16px;
+    padding: 0 16px;
+    width: calc(100% + 32px);
+  }
+`;
+
+// Update the Row component to handle mobile view
+const Row = styled.div`
+  display: flex;
+  align-items: stretch;
+  width: fit-content;
+  min-width: 100%;
+  border-bottom: 1px solid ${props => props.theme.border};
+  
+  &:last-child {
+    border-bottom: none;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: inherit;
+  }
 `;
 
 // --- Constants ---

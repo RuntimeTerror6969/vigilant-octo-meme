@@ -23,7 +23,7 @@ This application is built as a frontend-only solution that allows users to:
 - `react-window` (v1.8.11) - Virtualized list for efficient rendering of large datasets
 - `styled-components` (v6.1.16) - CSS-in-JS styling solution
 - `react-select` (v5.10.1) - Enhanced select component for query selection
-- `papaparse` (v5.5.2) - CSV parsing utility
+- `papaparse` (v5.5.2) - Used for CSV export functionality in the results table
 
 ## Performance Metrics
 
@@ -71,7 +71,7 @@ This application is built as a frontend-only solution that allows users to:
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
+git clone https://github.com/RuntimeTerror6969/vigilant-octo-meme
 ```
 
 2. Install dependencies:
