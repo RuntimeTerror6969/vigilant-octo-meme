@@ -145,9 +145,8 @@ const handleExport = () => {
 ```
 
 ### Performance Metrics
-- Initial load time: ~1.2s
-- Time to interactive: ~1.5s
-- First contentful paint: ~0.8s
+- Initial load time: ~1s
+- First contentful paint: ~1.1s
 - Bundle size: ~1MB (gzipped)
 
 ## Future Improvements

@@ -28,9 +28,8 @@ This application is built as a frontend-only solution that allows users to:
 ## Performance Metrics
 
 ### Load Time
-- Initial page load: ~1.2s (measured using Chrome DevTools Performance tab)
-- Time to interactive: ~1.5s
-- First contentful paint: ~0.8s
+- Initial page load: ~1s (measured using Chrome DevTools Performance tab)
+- First contentful paint: ~1.1s
 
 ### Performance Optimizations
 1. **Code Splitting**
@@ -98,9 +97,6 @@ npm run build
 ## Performance Testing Methodology
 Load time and performance metrics were measured using:
 - Chrome DevTools Performance tab
-- Lighthouse CI
-- Web Vitals API
-- React DevTools Profiler
 
 ## Contributing
 This is a demonstration project for the Atlan Frontend Internship Task 2025. While it's not open for contributions, feel free to fork and modify for your own learning purposes.
