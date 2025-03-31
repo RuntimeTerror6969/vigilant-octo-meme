@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "productID": 1,
+      "productName": "Chai",
+      "supplierID": 1,
+      "categoryID": 1,
+      "quantityPerUnit": "10 boxes x 20 bags",
+      "unitPrice": 18.00,
+      "unitsInStock": 39,
+      "unitsOnOrder": 0,
+      "reorderLevel": 10,
+      "discontinued": 0
+    },
+    {
+      "productID": 2,
+      "productName": "Chang",
+      "supplierID": 1,
+      "categoryID": 1,
+      "quantityPerUnit": "24 - 12 oz bottles",
+      "unitPrice": 19.00,
+      "unitsInStock": 17,
+      "unitsOnOrder": 40,
+      "reorderLevel": 25,
+      "discontinued": 0
+    }
+  ]
+} 
